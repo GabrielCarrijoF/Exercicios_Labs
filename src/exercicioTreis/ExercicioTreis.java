@@ -15,13 +15,9 @@ public class ExercicioTreis {
     do {
       System.out.println("Informe Um Numero");
       numero = sc.nextInt();
-
-    } while (numero == 0);
-
-    for (int i = 0; i <= numero; i++) {
-
+    } while (numero <= 0);
+    for (int i = 1; i <= numero; i++) {
       System.out.println(i);
-
     }
     sc.close();
   }

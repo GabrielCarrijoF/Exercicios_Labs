@@ -27,6 +27,3 @@ public class ExercicioDois {
     sc.close();
   }
 }
-
-/* Pensei em usar um Calender e transformar isso em dias sem fazer muitas perguntas, mais acho que isso
-n entra mt no resultado final. Apesar que acho que facilita ksksk */
