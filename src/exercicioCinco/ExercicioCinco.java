@@ -21,7 +21,7 @@ public class ExercicioCinco {
 
     quantidadeMedia = (quantidadeMaximaEmEstoque + quantidadeMinimaEmEstoque) / 2;
 
-    if (quantidadeAtualEmEstoque <= quantidadeMedia) {
+    if (quantidadeAtualEmEstoque >= quantidadeMedia) {
       System.out.println("Não Efetuar A Compra");
     } else {
       System.out.println("Efetuar Compra");
