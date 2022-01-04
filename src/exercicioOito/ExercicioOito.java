@@ -4,16 +4,16 @@ public class ExercicioOito extends Pilha {
 
   public static void main(String[] args) {
 
-    Pilha teste = new Pilha();
+    Pilha ordem = new Pilha();
 
-    teste.push(5);
-    teste.push(4);
-    teste.push(3);
-    teste.push(2);
-    teste.push(1);
+    ordem.push(5);
+    ordem.push(4);
+    ordem.push(3);
+    ordem.push(2);
+    ordem.push(1);
 
-    while (!teste.isEmpty()) {
-      int elemento = teste.pop();
+    while (!ordem.isEmpty()) {
+      int elemento = ordem.pop();
       System.out.println("Estrutura da Pilha: " + elemento);
     }
   }
