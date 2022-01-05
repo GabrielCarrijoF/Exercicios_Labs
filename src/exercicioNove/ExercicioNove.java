@@ -26,8 +26,6 @@ public class ExercicioNove extends Fila {
     ordem.insert(18);
     ordem.insert(19);
     ordem.insert(20);
-    System.out.println(ordem.get());
-    ordem.insert(21);
 
     while (!ordem.isEmpty()) {
       int elemento = ordem.get();
