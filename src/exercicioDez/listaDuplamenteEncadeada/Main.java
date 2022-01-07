@@ -1,0 +1,25 @@
+package exercicioDez.listaDuplamenteEncadeada;
+
+public class Main {
+
+  Node inicio;
+  Node fim;
+  int tamanho;
+
+  public void inserirInicio(String info) {
+    Node node = new Node(); // nó instanciado
+    node.info = info; //nó recebe informação
+    node.anterior = null; // nó anterior fica como nulo
+    node.proximo = inicio; // seta um valor para o proximo no caso null
+
+    if (inicio != null) { //se inicio for direfente de nulo
+      inicio.anterior = node; // inicio recebe um valor e coloca no anterior
+    }
+    inicio = node; //inicio recebe valor
+
+    if (tamanho == 0) {
+      fim = inicio;
+    }
+    tamanho++; //incrementa um elemento
+  }
+}

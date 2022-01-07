@@ -1,4 +1,6 @@
-package listaEncadeada.node;
+package exercicioDez.listaEncadeada.node.node;
+
+import exercicioDez.listaEncadeada.node.node.Node;
 
 public class List {
 

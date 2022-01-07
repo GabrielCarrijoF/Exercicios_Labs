@@ -1,8 +1,8 @@
-package listaEncadeada;
+package exercicioDez.listaEncadeada.node;
 
 
 import java.util.Scanner;
-import listaEncadeada.node.List;
+import exercicioDez.listaEncadeada.node.node.List;
 
 public class Menu {
 
