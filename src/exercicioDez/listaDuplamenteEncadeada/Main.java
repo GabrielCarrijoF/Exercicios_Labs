@@ -1,6 +1,6 @@
 package exercicioDez.listaDuplamenteEncadeada;
 
-public class Main {
+public class Main extends Node{
 
   Node inicio;
   Node fim;
@@ -24,17 +24,24 @@ public class Main {
   }
 
   public String retirarInicio() {
-    if (inicio == null){ // inicio é igual a nulo
+    if (inicio == null) { // inicio é igual a nulo
       return null;
     }
     String salvarinformação = inicio.info; // salva a informação
-
     inicio = inicio.proximo; // inicio é igual a inicio.proximo
-
-    if (inicio != null){ //inicio é diferente de nulo
+    if (inicio != null) { //inicio é diferente de nulo
       inicio.anterior = null;
+    } else {
+      fim = null;
     }
-    tamanho --;
+    tamanho--;
     return salvarinformação;
+  }
+
+  public void inserirFim(String info){
+    Node node = new Node();
+    node.info = info; // informação
+    node.proximo = null;
+    node.anterior = fim;
   }
 }
