@@ -22,4 +22,19 @@ public class Main {
     }
     tamanho++; //incrementa um elemento
   }
+
+  public String retirarInicio() {
+    if (inicio == null){ // inicio é igual a nulo
+      return null;
+    }
+    String salvarinformação = inicio.info; // salva a informação
+
+    inicio = inicio.proximo; // inicio é igual a inicio.proximo
+
+    if (inicio != null){ //inicio é diferente de nulo
+      inicio.anterior = null;
+    }
+    tamanho --;
+    return salvarinformação;
+  }
 }
