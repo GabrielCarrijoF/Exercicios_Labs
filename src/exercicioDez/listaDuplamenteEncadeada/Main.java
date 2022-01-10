@@ -61,6 +61,8 @@ public class Main extends Node {
     fim = fim.anterior; //fim é igual a fim.anterior para que possa excluir o nó
     if (fim != null) { // valida se o proximo nó é nulo
       fim.proximo = null;
+    } else {
+      inicio = null; // para o inicio n apontar para um nó inexistente colocamos ele como nulo
     }
     tamanho--; // retira nó
     return salvarInformacao; // volta informação
