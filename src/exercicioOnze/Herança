@@ -1,0 +1,7 @@
+  Herança permite que uma classe herde todos os dados, atributos, funções de outra,
+  nisso vc consegue algumas vantagens como reutilizar codigos. Para usar a herança
+  basta colocar o nome de uma classe colocar extends e a outra classe ex:  class Gabriel extends Carrijo.
+
+  Após herdar uma classe não precisa especificar novamente os atributos e métodos, mais pode informar dados a mais,
+  com isso quando você define uma classe que herda outra a que foi herdada passa a ser uma super classe
+  e a outra uma sub classe que no caso foi derivada.
