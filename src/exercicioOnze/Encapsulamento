@@ -1,0 +1,6 @@
+  O encapsulamento é uma "proteção", isso ocorre quando vc faz alguma implementação de alguma classe,
+  e dela expoe apenas as operações seguras. A implementação de getter e setters para encapsulamento,
+  para isso colocando os atrinutos como private e gerando os getter e  setters, porem não é sempre
+  que você pode deixar um atributo ser acessado e alterado no programa então no encapsulamento gerar
+  getter e setters dá uma segurança mais tendo em mente para implementar sempre bom pensar nas regras
+  de negocio.
