@@ -1,1 +1,3 @@
-10) 
+10) Uma lista duplamente encadeada diferente da encadeada simples, cada nó guarda uma informação e tambem cada nó
+ guarda a posição do elemento anterior e do proximo elemento tambem. A lista duplamente encadeada pode ser usada em
+ varias operações de inserção e remoção de elementos.
