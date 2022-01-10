@@ -67,4 +67,25 @@ public class Main extends Node {
     tamanho--; // retira nó
     return salvarInformacao; // volta informação
   }
+
+  public void inserirMeio(int indice, String info) {
+    if (indice <= 0) { // valida a posição se é <= a 0
+      inserirInicio(info);
+    } else if (indice >= tamanho) { // valida se indice é maior que o tamanho do nó
+      inserirFim(info);
+    } else {
+      Node node = new Node(); // inicia o nó
+      Node local = inicio; // inicia um local
+      for (int i = 0; i < indice-1; i++) { // pega o indice no total para caucular o meio
+        local = local.proximo;
+      }
+      node.info = info; // pega a informação
+      node.anterior = local; // passa o parametro e aponta o novo nó para o local correto
+      node.proximo = local.proximo;  // aponta para o nó correto
+      local.proximo = node; // aponta para o nó correto
+      node.proximo.anterior = node;// aponta para o nó correto
+      tamanho++; // adiciona o novo nó
+    }
+
+  }
 }
