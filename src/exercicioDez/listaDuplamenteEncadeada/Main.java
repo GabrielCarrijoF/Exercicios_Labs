@@ -43,5 +43,10 @@ public class Main extends Node{
     node.info = info; // informação
     node.proximo = null;
     node.anterior = fim;
+    fim = node;
+    if (tamanho == 0){
+      inicio = fim;
+    }
+    tamanho ++;
   }
 }
