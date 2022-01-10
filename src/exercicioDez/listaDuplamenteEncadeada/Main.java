@@ -76,7 +76,7 @@ public class Main extends Node {
     } else {
       Node node = new Node(); // inicia o nó
       Node local = inicio; // inicia um local
-      for (int i = 0; i < indice-1; i++) { // pega o indice no total para caucular o meio
+      for (int i = 0; i < indice - 1; i++) { // pega o indice no total para caucular o meio
         local = local.proximo;
       }
       node.info = info; // pega a informação
@@ -86,6 +86,28 @@ public class Main extends Node {
       node.proximo.anterior = node;// aponta para o nó correto
       tamanho++; // adiciona o novo nó
     }
+  }
 
+  public String retirarMeio(int indice) {
+    if (indice < 0 || indice >= tamanho || inicio == null) {  // faz a validação dos indices
+      return null;
+    } else if (indice == 0) {  // retira do inicio
+      return retirarInicio();
+    } else if (indice == tamanho - 1) { //retira do final
+      return retirarFim();
+    }
+    Node local = inicio; // cria local
+    for (int i = 0; i < indice; i++) { // pega o meio
+      local = local.proximo;
+    }
+    if (local.anterior != null) {
+      local.anterior.proximo = local.proximo; // aponta para o nó correto;
+    }
+    if (local.proximo != null) {
+      local.proximo.anterior = local.anterior;  // aponta para o nó correto;
+    }
+    tamanho--; // retira o nó
+    return local.info; // retorna a informação
   }
 }
+
