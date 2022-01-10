@@ -1,6 +1,6 @@
 package exercicioDez.listaDuplamenteEncadeada;
 
-public class Main extends Node{
+public class Main extends Node {
 
   Node inicio;
   Node fim;
@@ -27,7 +27,7 @@ public class Main extends Node{
     if (inicio == null) { // inicio é igual a nulo
       return null;
     }
-    String salvarinformação = inicio.info; // salva a informação
+    String salvarinformacao = inicio.info; // salva a informação
     inicio = inicio.proximo; // inicio é igual a inicio.proximo
     if (inicio != null) { //inicio é diferente de nulo
       inicio.anterior = null;
@@ -35,18 +35,34 @@ public class Main extends Node{
       fim = null;
     }
     tamanho--;
-    return salvarinformação;
+    return salvarinformacao;
   }
 
-  public void inserirFim(String info){
+  public void inserirFim(String info) {
     Node node = new Node();
-    node.info = info; // informação
-    node.proximo = null;
+    node.info = info; // salva informação
+    node.proximo = null; // no. proximo igual a nulo
     node.anterior = fim;
-    fim = node;
-    if (tamanho == 0){
+    if (fim != null) {
+      fim.proximo = node; // faz a ligação entre proximo nó e o final
+    }
+    fim = node; //atribiu informação no final
+    if (tamanho == 0) {
       inicio = fim;
     }
-    tamanho ++;
+    tamanho++;
+  }
+
+  public String retirarFim() {
+    if (fim == null) {
+      return null;
+    }
+    String salvarInformacao = fim.info;
+    fim = fim.anterior;
+    if (fim != null) {
+      fim.proximo = null;
+    }
+    tamanho--;
+    return salvarInformacao;
   }
 }
