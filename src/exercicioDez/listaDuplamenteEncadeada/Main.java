@@ -54,15 +54,15 @@ public class Main extends Node {
   }
 
   public String retirarFim() {
-    if (fim == null) {
+    if (fim == null) { // fim é igual a nulo
       return null;
     }
-    String salvarInformacao = fim.info;
-    fim = fim.anterior;
-    if (fim != null) {
+    String salvarInformacao = fim.info; // salva a informação do fim
+    fim = fim.anterior; //fim é igual a fim.anterior para que possa excluir o nó
+    if (fim != null) { // valida se o proximo nó é nulo
       fim.proximo = null;
     }
-    tamanho--;
-    return salvarInformacao;
+    tamanho--; // retira nó
+    return salvarInformacao; // volta informação
   }
 }
