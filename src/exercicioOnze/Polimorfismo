@@ -1,0 +1,3 @@
+  Polimorfismo ele permite que variaveis de um mesmo tipo possam ser usadas em objetos
+  de um tipo diferente, e assim podem ter duas variaveis do mesmo tipo sendo instanciadas
+  de formas diferentes.
